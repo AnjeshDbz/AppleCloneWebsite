@@ -71,3 +71,17 @@ gsap.to("#section-bottom", {
   },
   opacity: 0,
 });
+
+var tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: `#section2`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+})
+
+tl.to("#section2 h2", {
+  top: `-50%`,
+})
