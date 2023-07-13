@@ -39,3 +39,35 @@ function loco() {
 }
 
 loco();
+
+gsap.to("#section1>video", {
+  scrollTrigger: {
+    trigger: `#section1>video`,
+    start: `2% top`,
+    end: `bottom top`,
+    scroller: `#main`,
+  },
+  onStart: () => {
+    document.querySelector("#section1 video").play();
+  },
+});
+
+gsap.to("#section1", {
+  scrollTrigger: {
+    trigger: `#section1`,
+    start: `top top`,
+    end: `bottom top`,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+gsap.to("#section-bottom", {
+  scrollTrigger: {
+    trigger: `#section-bottom`,
+    start: `5% top`,
+    end: `bottom top`,
+    scroller: `#main`,
+  },
+  opacity: 0,
+});
